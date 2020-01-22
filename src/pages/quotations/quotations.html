@@ -1,0 +1,58 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{ 'Quotations' | translate }}</ion-title>
+      <!-- <button class="btn" (click)="goBack()" [(ngClass)]='icon_RTl'><img src="assets/imgs/back.png"></button> -->
+    </ion-navbar>
+
+      
+    <div class="block-body">
+      <div class="body-app shadow">
+          <div class="bg-brown" *ngIf="BgDete">
+            <ion-grid class="no-padding">
+              <ion-row>
+                <ion-col col-7><h4>{{ 'Daterequest' | translate }} : {{ data?.created_at }}</h4></ion-col>
+                <ion-col col-5><h4>{{ 'Ordernumber' | translate }} : {{ id }}</h4></ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+          <ion-grid class="no-padding">
+            <ion-row>
+              <ion-col col-6>
+                  <label class="radios sall">
+                    <input type="radio" name="radio" value="price" (click)="clickfilter('price')">
+                    <p [(ngClass)]='iconRtl'>{{ 'Lowestprice' | translate }}</p>
+                    <strong class="cross" [(ngClass)]='iconLtr'></strong>
+                    <span class="checkmark"></span>
+                  </label>
+              </ion-col>
+              <ion-col col-6>
+                  <label class="radios date">
+                    <input type="radio" name="radio" value="date" (click)="clickfilter('date')">
+                    <p [(ngClass)]='iconRtl'>{{ 'Earliestdate' | translate }}</p>
+                    <strong class="cross"[(ngClass)]='iconLtr'></strong>
+                    <span class="checkmark"></span>
+                  </label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <div class="list-order" *ngFor="let order of orders">
+              <h3>{{ 'Ordernumber' | translate }} : <span>{{ order?.offer_id }}</span></h3>
+              <h3>{{ 'Daterequest' | translate }} : <span>{{ order?.excute_date }}</span></h3>
+              <h3>{{ 'Ordertime' | translate }} : <span>{{ order?.excute_time }}</span></h3>
+              <h3>{{ 'TotalCost' | translate }} : <span>{{ order?.total_price }} {{ 'RS' | translate }}</span></h3>
+              <h3>{{ 'RequestStatus' | translate }} : <span>{{ 'Under' | translate }}</span></h3>
+              <strong class="done" [(ngClass)]='iconLtr' (click)="goData(order?.offer_id)">{{ 'Acceptance' | translate }}</strong>
+          </div>
+          <button class="btn-button bg-green" (click)="resentRequest(order?.offer_id)">{{ 'Resrequest' | translate }}</button>
+      </div>
+    </div>
+
+
+  </ion-header>
+
+<ion-content padding>
+
+  
+
+</ion-content>

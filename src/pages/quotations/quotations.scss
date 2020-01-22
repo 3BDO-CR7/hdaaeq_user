@@ -1,0 +1,138 @@
+page-quotations {
+    // .back-button{
+    //     display: none !important
+    // }
+    // .header button img{
+    //     max-width: 20px;
+    // }
+    // .Ber_Tn{
+    //     position: absolute;
+    //     top: 50%;
+    //     z-index: 20;
+    // }
+    // .icon_RTl{
+    //     right: 15px;
+    //     transform: translateY(-50%) rotate(180deg);
+    // }
+    // .icon_Ltr{
+    //     left: 15px;
+    //     transform: translateY(-50%) rotate(0deg);
+    // }
+    .list-order{
+        margin: 10px 0;
+        border: 1px solid #DDD;
+        border-radius: 15px;
+        padding: 5px 10px;
+        position: relative;
+    }
+    .done{
+        position: absolute;
+        bottom: 12px;
+        color: #82b71c;
+        text-decoration: underline
+    }
+    .bg-brown {
+        text-align: center;
+    }
+    h4{
+        color: #fff;
+        margin: 0px;
+        font-size: 12px
+    }
+    .list-order h3 span{
+        color: #8a4c2d;
+        margin: 0px 5px
+    }
+    .radios .checkmark {
+        top: 4px !important;
+        height: 40px;
+        width: 100%;
+        border-radius: 50px;
+        border: 1px solid #c5c5c5;
+        margin: 0px auto !important;
+        display: table;
+        background: transparent
+    }
+    .radios input:checked ~ .checkmark {
+        background-color: transparent;
+        border: 0;
+    }
+    .radios:hover input ~ .checkmark {
+        background-color: transparent;
+        border: 1px solid #c5c5c5;
+    }
+    .radios {
+        margin: 0px;
+        margin-top: 10px
+    }
+    .radios p{
+        margin: 0 !important;
+        position: absolute;
+        font-size: 12px;
+        top: 7px;
+    }
+    .radios input:checked ~ p {
+        background: transparent;
+        color: #82b71c
+    }
+    .radios input:checked ~ .checkmark{
+        border: 1px solid #82b71c !important;
+    }
+    .radios .checkmark:after {
+        top: 6px;
+        right: 13px;
+        margin: auto;
+        width: 100%;
+        height: 40px;
+        border-radius: 0%;
+        background: transparent;
+        font-size: 13px
+    }
+    .radios .cross {
+        top: 11px;
+        height: 16px;
+        width: 16px;
+        border: 1px solid #e2e2e2;
+        border-radius: 3px;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+    }
+    .radios:hover input ~ .cross {
+        background-color: transparent;
+        border: 0;
+    }
+    .radios input:checked ~ .cross {
+        background-color: #82b71c;
+        border: 0;
+    }
+    .radios .cross:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    .radios input:checked ~ .cross:after {
+        display: block;
+    }
+    .radios .cross:after {
+        left: 0px;
+        right: 0;
+        margin: auto;
+        top: 1px;
+        width: 4px;
+        height: 8px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .btn-button{
+        width: 180px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 30px;
+    }
+}

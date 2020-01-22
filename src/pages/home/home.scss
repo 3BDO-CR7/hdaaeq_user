@@ -1,0 +1,23 @@
+page-home {
+    .back-button{
+        display: none !important
+    }
+    .header button img{
+        max-width: 20px;
+    }
+    .shadow{
+        margin: 20px 0
+    }
+    .shadow .animated:nth-child(1) {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+    }
+    .shadow .animated:nth-child(2) {
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+    }
+    .shadow .animated:nth-child(3) {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    }
+}

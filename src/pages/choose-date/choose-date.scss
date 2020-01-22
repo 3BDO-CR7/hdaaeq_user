@@ -1,0 +1,53 @@
+page-choose-date {
+    .btn-button{
+        width: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 30px
+    }
+    h3{
+        border: 1px solid #c5c5c5;
+        border-radius: 50px;
+        padding: 12px;
+        margin: 5px 0 !important;
+        color: #9d9ca1
+    }
+    h3 ion-icon{
+        color: #c5c5c5;
+        font-size: 20px !important;
+        vertical-align: middle;
+        position: relative;
+        top: -3px;
+    }
+    .divRtl{
+        float: right
+    }
+    .divLtr{
+        float: left;
+    }
+    .images{
+        display: inline-block
+    }
+    .upload{
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        text-align: center
+    }
+    .upload img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%
+    }
+    .upload ion-icon{
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: -10px
+    }
+}

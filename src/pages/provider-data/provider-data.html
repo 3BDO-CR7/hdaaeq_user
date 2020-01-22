@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'ProviderData' | translate }}</ion-title>
+  </ion-navbar>
+
+    <div class="block-body">
+        <div class="body-app shadow">
+            <div class="user">
+                <img src="{{ data?.provider_image }}">
+                <h4>{{ data?.provider_name }}</h4>
+            </div>
+            <div class="contact">
+                <h3>
+                    <img src="assets/imgs/call.png">
+                    {{ data?.provider_phone }}
+                </h3>
+                <h3>
+                    <img src="assets/imgs/flag.png">
+                    {{ data?.provider_country }}
+                </h3>
+                <h3>
+                    <img src="assets/imgs/location.png">
+                    {{ data?.provider_city }}
+                </h3>
+                <ion-grid class="no-padding">
+                  <ion-row>
+                    <ion-col col-6>
+                      <button class="btn-button bg-drow" (click)="goComplete()">{{ 'Complete' | translate }}</button>
+                    </ion-col>
+                    <ion-col col-6>
+                      <button class="btn-button bg-drow" (click)="goQuotations()">{{ 'CancelOrder' | translate }}</button>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+            </div>
+
+        </div>
+    </div>
+
+</ion-header>
+
+<ion-content padding>
+
+
+
+</ion-content>

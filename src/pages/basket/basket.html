@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'basket' | translate }}</ion-title>
+    <button class="btn" menuToggle [(ngClass)]='iconRtl'><img src="assets/imgs/menu.png"></button>
+    <button class="btn" (click)="openNoty()" [(ngClass)]='iconLtr'><img src="assets/imgs/bell.png"></button>
+  </ion-navbar>
+
+  <div class="block-body">
+      <div class="body-app shadow">
+
+        <div class="up-section" *ngFor="let ser_basket of up_arr">
+          <ion-list *ngFor="let sup_ser_basket of ser_basket; let index = index" class="animated fadeInUp">
+            <ion-item-sliding>
+              <ion-item (click)="goDetails(sup_ser_basket?.category_id,sup_ser_basket)">
+                <ion-avatar item-start>
+                  <img src="{{ sup_ser_basket?.Category_Image }}">
+                </ion-avatar>
+<!--                <h3 class="h3_text">{{ sup_ser_basket?.Category_Name }}</h3>-->
+              </ion-item>
+              <ion-item-options side="left" (click)="goRemove(sup_ser_basket?.category_id)">
+                <button ion-button color="danger">
+                  <ion-icon name="trash"></ion-icon>
+                </button>
+              </ion-item-options>
+              <!-- <ion-item-options side="right" (click)="goEdite(sup_ser_basket?.category_id)">
+                <button ion-button color="primary">
+                  <ion-icon name="create"></ion-icon>
+                </button>
+              </ion-item-options> -->
+            </ion-item-sliding>
+          </ion-list>
+        </div>
+    
+        
+        <strong class="text animated fadeInUp" *ngIf="up_arr.length == 0">* {{ 'basketempty' | translate }} *</strong>
+    
+        <button class="btn-button bg-green" (click)="goDone()" *ngIf="up_arr.length > 0">{{ 'confirm' | translate }}</button>
+    
+      </div>
+  </div>
+  
+</ion-header>
+
+<ion-content padding>
+
+
+
+</ion-content>

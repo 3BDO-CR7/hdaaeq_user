@@ -1,0 +1,27 @@
+page-done {
+    .back-button{
+        display: none !important
+    }
+    .header img{
+        max-width: 20px;
+    }
+    .done{
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+    .done img{
+        max-width: 120px;
+    }
+    .done p{
+        padding: 0px 30px;
+        font-size: 14px;
+        margin: 0
+    }
+    .btn-button{
+        text-decoration: underline
+    }
+}

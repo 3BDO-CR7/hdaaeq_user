@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'time' | translate }}</ion-title>
+  </ion-navbar>
+
+  <div class="block-body">
+      <div class="body-app shadow">
+        
+          <div class="form-section">
+              <div class="upload-image" *ngFor="let ser of serves">
+                  <ion-grid>
+                    <ion-row no-padding>
+                      <ion-col col-8>
+                          <h3>{{ ser?.sub_service_name }}</h3>
+                      </ion-col>
+                      <ion-col col-4>
+                        <input (focusout)="getPrice($event.target,ser?.sub_service_name)" name="{{ser?.sub_service_name}}" value="{{ ser?.unit_details }}" class="input-price" type="tel"  id="{{ser?.sup_service_id}}"  placeholder="{{ unit }}">
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+              </div>
+          </div>          
+          
+          <button class="btn-button bg-green" [hidden]="has_details == 0" (click)="goDone()">{{ 'Sent' | translate }}</button>
+          
+          <button class="btn-button bg-green" *ngIf="has_details == 0" (click)="editCurrent()">{{ 'confirm' | translate }}</button>
+
+      </div>
+  </div>
+
+</ion-header>
+
+<ion-content padding>
+
+
+
+</ion-content>

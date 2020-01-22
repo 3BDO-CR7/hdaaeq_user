@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'basket' | translate }}</ion-title>
+  </ion-navbar>
+
+  <div class="block-body">
+    <div class="body-app shadow">
+        
+        <div class="up-section">
+
+          <div *ngIf="sup_ser_basket?.category_id != 2;">
+            <ion-slides *ngIf="block_img.length !=0 && block_img.length != undefined " spaceBetween="5px" pager="true" autoplay="3000" speed="3000">
+                <ion-slide *ngFor="let img of block_img">
+                  <img src="{{img?.image}}" (click)="itemSelected(block_img)"  #myImage>
+                </ion-slide>
+            </ion-slides>
+          </div>
+
+          <div class="discrbion" *ngIf="sup_ser_basket?.category_id != 2;">
+              <h3 class="brown">{{ 'Details' | translate }} : </h3>
+              <p>{{ up_detils?.service_desc }}</p>
+          </div>
+
+          <div class="discrbion">
+              <h3 class="brown">{{ 'Services' | translate }} : </h3>
+              <div class="list-order" *ngIf="sup_ser_basket?.category_id != 2;else temp">
+                <div *ngFor="let serv of up_serves">
+                    <h4><span>*</span> {{ serv?.name }}</h4>
+                </div>
+              </div>
+              <ng-template #temp>
+                <div class="table_order">
+                    <div class="border_box" no-padding *ngFor="let up_serv of Up_Serves">
+                        <div>
+                            <h4> {{ up_serv?.name }} </h4>
+                            <div *ngFor="let sup_serv of up_serv.subServices" class="block_table">
+                              <h6> - {{ sup_serv?.sub_service_name }}</h6>
+                              <span class="brown">
+                                  <strong>{{ sup_serv?.unit_details }}</strong>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </ng-template>
+          </div>
+
+        </div>
+
+        <button class="btn-button bg-green" (click)="goEdite(sup_ser_basket?.category_id)">{{ 'edit' | translate }}</button>
+    
+    </div>
+  </div>
+  
+</ion-header>
+
+<ion-content padding>
+
+</ion-content>

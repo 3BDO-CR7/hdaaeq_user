@@ -1,0 +1,31 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{ 'Request' | translate }}</ion-title>
+      <button class="btn" menuToggle [(ngClass)]='iconRtl'><img src="assets/imgs/menu.png"></button>
+      <button class="btn" (click)="openNoty()" [(ngClass)]='iconLtr'><img src="assets/imgs/bell.png"></button>
+    </ion-navbar>
+
+    <div class="block-body">
+        <div class="body-app shadow">
+          
+            <div class="form-section">
+                <div class="done">
+                    <img src="assets/imgs/done.png">
+                    <p>{{ 'titles' | translate }}</p>
+                    <button class="btn-button brown" (click)="goBasket()">{{ 'Gobasket' | translate }}</button>
+                    <button class="btn-button brown" (click)="goComplet()">{{ 'gocomplet' | translate }}</button>
+                    <button class="btn-button brown" (click)="goHome()">{{ 'goHome' | translate }}</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+  </ion-header>
+
+<ion-content padding>
+
+  
+
+</ion-content>

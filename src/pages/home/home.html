@@ -1,0 +1,25 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{ 'home' | translate }}</ion-title>
+      <button class="btn" menuToggle [(ngClass)]='iconRtl'><img src="assets/imgs/menu.png"></button>
+      <button class="btn" (click)="openNoty()" [(ngClass)]='iconLtr'><img src="assets/imgs/bell.png"></button>
+      <button class="btn" (click)="openBasket()" [(ngClass)]='iconBasket'><img src="assets/imgs/cart.png"></button>
+    </ion-navbar>
+
+    <div class="block-body">
+      <div class="body-app shadow">
+          <div class="block-item animated fadeInUp" (click)="goCategories(category?.id, category?.name, category?.image)" *ngFor="let category of categor">
+<!--            <h3>{{ category?.name }}</h3>-->
+            <img src="{{ category?.image }}">
+          </div>
+      </div>
+    </div>
+
+    
+  </ion-header>
+
+<ion-content padding>
+
+
+</ion-content>

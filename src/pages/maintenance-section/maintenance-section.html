@@ -1,0 +1,69 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>{{ 'Maintenance' | translate }}</ion-title>
+      <button class="btn btn_basket" (click)="backBasket()" *ngIf="key == 1" [(ngClass)]='iconBasket'>
+        <img src="assets/imgs/back.png" [(ngClass)]='img_Rtl'>
+      </button>
+    </ion-navbar>
+
+    <div class="block-body">
+        <div class="body-app shadow">
+          
+            <div class="hegie-page">
+              <div class="up-section" *ngFor="let serv of serves">
+                  <!-- <ion-grid class="no-padding">
+                    <ion-row>
+                      <ion-col col-10>
+                          <h3 (click)="goFading(serv?.id,$event)"  id="first-{{serv?.id}}">
+                            {{ serv?.name }}
+                            <ion-icon name="arrow-dropdown" [(ngClass)]='iconDir'></ion-icon>
+                          </h3>
+                      </ion-col>
+                      <ion-col col-2 class="no-padding">
+                          <label class="ckicked">
+                            <input type="checkbox" id="id-{{serv?.id}}" (click)="chooseServices(serv?.id,serv?.name)">
+                            <span class="checkmark"></span>
+                          </label>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid> -->
+
+                  <ion-grid class="no-padding">
+                    <ion-row>
+                      <ion-col col-10>
+                          <h3 (click)="goFading(serv?.id,$event)"  id="first-{{serv?.id}}">
+                            {{ serv?.name }}
+                            <ion-icon name="arrow-dropdown" [(ngClass)]='iconDir'></ion-icon>
+                          </h3>
+                      </ion-col>
+                      <ion-col col-2 class="no-padding">
+                          <ion-checkbox [(ngModel)]="chicked[serv?.id]" id="id-{{serv?.id}}" (click)="chooseServices(serv?.id,serv?.name)"></ion-checkbox>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+
+                  <div class="view-section" id="second-{{serv?.id}}">
+                        <ion-slides *ngIf="serv.images.length !=0 && serv.images.length != undefined" spaceBetween="5px" pager="true" autoplay="3000" loop="true" speed="3000">
+                      
+                          <ion-slide *ngFor="let img of serv.images">
+                            <img src="{{img?.image}}">
+                          </ion-slide>
+                    
+                      </ion-slides>  
+                      <p>{{serv?.description}}</p>
+                  </div>
+              </div>
+            </div>
+            <button class="btn-button bg-green" [disabled]="services_arr.length == 0" (click)="goDate()">{{ 'ask' | translate }}</button>
+
+        </div>
+    </div>
+
+  </ion-header>
+
+<ion-content padding>
+
+  
+
+</ion-content>

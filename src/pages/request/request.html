@@ -1,0 +1,49 @@
+<ion-header>
+
+    <ion-navbar>
+        <!-- <button class="btn" menuToggle [(ngClass)]='iconRtl'><img src="assets/imgs/menu.png"></button> -->
+        <ion-title>{{ 'requests' | translate }}</ion-title>
+        <!-- <button class="btn" (click)="openNoty()" [(ngClass)]='iconLtr'><img src="assets/imgs/bell.png"></button> -->
+    </ion-navbar>
+
+    <div class="block-body">
+        <div class="body-app shadow">
+            <ion-segment [(ngModel)]="pet">
+                <ion-segment-button value="Current-Orders" (click)="currentOrder()">
+                <span>{{ 'Current' | translate }}</span>
+                </ion-segment-button>
+                <ion-segment-button value="finish-Orders" (click)="finishOrder()">
+                <span>{{ 'closedorders' | translate }}</span>
+                </ion-segment-button>
+            </ion-segment>
+        
+            <div [ngSwitch]="pet">
+                <ion-list *ngSwitchCase="'Current-Orders'">
+                    <div class="list-order" (click)="goCurrentOrders(order.id, order.type)" *ngFor="let order of orders">
+                        <h4>{{ 'Ordernumber' | translate }} : <span>{{ order?.id }}</span></h4>
+                        <h4>{{ 'Daterequest' | translate }} : <span>{{ order?.date }}</span></h4>
+                        <h4 *ngIf="order?.total_price != ''">{{ 'TotalCost' | translate }} : <span>{{ order?.total_price }}</span></h4>
+                        <h4>{{ 'RequestStatus' | translate }} : <span>{{ order?.status }}</span></h4>
+                    </div>
+                    <h4 class="text" *ngIf="orders.length == 0">* {{ 'NoNewapp' | translate }} *</h4>
+                </ion-list>
+                <ion-list *ngSwitchCase="'finish-Orders'">
+                    <div class="list-order" (click)="goFinishOrder(active.id)" *ngFor="let active of activeorders">
+                        <h4>{{ 'Ordernumber' | translate }} : <span>{{ active?.id }}</span></h4>
+                        <h4>{{ 'Daterequest' | translate }} : <span>{{ active?.date }}</span></h4>
+                        <h4>{{ 'TotalCost' | translate }} : <span>{{ active?.total_price }}</span></h4>
+                        <h4>{{ 'RequestStatus' | translate }} : <span>{{ active?.status }}</span></h4>
+                    </div>
+                    <h4 class="text" *ngIf="activeorders.length == 0">* {{ 'NoCompleted' | translate }} *</h4>
+                </ion-list>
+            </div>
+        </div>
+    </div>
+
+  </ion-header>
+
+<ion-content padding>
+
+  
+
+</ion-content>
