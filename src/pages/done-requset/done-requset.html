@@ -8,11 +8,12 @@
 
   <div class="block-body">
       <div class="body-app shadow">
-        
+
           <div class="form-section">
               <div class="done">
                   <img src="assets/imgs/done.png">
-                  <p>{{ 'title' | translate }}</p>
+<!--                  <p>{{ 'title' | translate }}</p>-->
+                  <p>{{data?.text}}</p>
                   <button class="btn-button brown" (click)="goHome()">{{ 'goHome' | translate }}</button>
               </div>
           </div>

@@ -25,11 +25,11 @@ export class ApiProvider {
   signIn(data):Observable<any> {
     return this.http.post(`${this.baseUrl}login`,data).map((response) => {return response});
   }
-  
+
   codes(data):Observable<any> {
     return this.http.post(`${this.baseUrl}codes`,data).map((response) => {return response});
   }
-  
+
   resendCode(data):Observable<any> {
     return this.http.post(`${this.baseUrl}resendCode`,data).map((response) => {return response});
   }
@@ -62,6 +62,10 @@ export class ApiProvider {
     return this.http.post(`${this.baseUrl}about`, data).map(response => {return response});
   }
 
+  priceOffer(data):Observable<any> {
+    return this.http.post(`${this.baseUrl}price_offer_text`, data).map(response => {return response});
+  }
+
   contact(data):Observable<any> {
     return this.http.get(`${this.baseUrl}contact-info`,data).map(response => {return response});
   }
@@ -81,11 +85,11 @@ export class ApiProvider {
   sentMessage(data):Observable<any> {
     return this.http.post(`${this.baseUrl}contact_us`, data).map(response => {return response});
   }
-  
+
   notification(data):Observable<any> {
     return this.http.post(`${this.baseUrl}notifiactions`, data).map(response => {return response});
   }
-  
+
   deleteNotifiaction(data):Observable<any> {
     return this.http.post(`${this.baseUrl}delete_notifiaction`, data).map(response => {return response});
   }
@@ -129,43 +133,43 @@ export class ApiProvider {
   subservices(data):Observable<any> {
     return this.http.post(`${this.baseUrl}sub_services`, data).map(response => {return response});
   }
-  
+
   new_order(data):Observable<any> {
     return this.http.post(`${this.baseUrl}new_order`, data).map(response => {return response});
   }
-  
+
   add_basket_image(data):Observable<any> {
     return this.http.post(`${this.baseUrl}add_basket_image`, data).map(response => {return response});
   }
-  
+
   get_basket_image(data):Observable<any> {
     return this.http.post(`${this.baseUrl}get_basket_image`, data).map(response => {return response});
   }
-  
+
   delete_basket_image(data):Observable<any> {
     return this.http.post(`${this.baseUrl}delete_basket_image`, data).map(response => {return response});
   }
-  
+
   notifiaction_status(data):Observable<any> {
     return this.http.post(`${this.baseUrl}notifiaction_status`, data).map(response => {return response});
   }
-  
+
   accept_provider_offer(data):Observable<any> {
     return this.http.post(`${this.baseUrl}accept_provider_offer`, data).map(response => {return response});
   }
-  
+
   resend_order(data):Observable<any> {
     return this.http.post(`${this.baseUrl}resend_order`, data).map(response => {return response});
   }
-  
+
   delete_order_cart(data):Observable<any> {
     return this.http.post(`${this.baseUrl}delete_order_cart`, data).map(response => {return response});
   }
-  
+
   get_order_cart(data):Observable<any> {
     return this.http.post(`${this.baseUrl}get_order_cart`, data).map(response => {return response});
   }
-  
+
   edit_order_cart(data):Observable<any> {
     return this.http.post(`${this.baseUrl}edit_order_cart`, data).map(response => {return response});
   }

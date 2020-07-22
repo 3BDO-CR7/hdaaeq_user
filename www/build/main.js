@@ -65,6 +65,9 @@ var ApiProvider = /** @class */ (function () {
     ApiProvider.prototype.about = function (data) {
         return this.http.post(this.baseUrl + "about", data).map(function (response) { return response; });
     };
+    ApiProvider.prototype.priceOffer = function (data) {
+        return this.http.post(this.baseUrl + "price_offer_text", data).map(function (response) { return response; });
+    };
     ApiProvider.prototype.contact = function (data) {
         return this.http.get(this.baseUrl + "contact-info", data).map(function (response) { return response; });
     };
@@ -184,11 +187,11 @@ var map = {
 		33
 	],
 	"../pages/basket-detils/basket-detils.module": [
-		831,
+		828,
 		32
 	],
 	"../pages/basket/basket.module": [
-		828,
+		830,
 		31
 	],
 	"../pages/change-lang/change-lang.module": [
@@ -196,7 +199,7 @@ var map = {
 		30
 	],
 	"../pages/change-password/change-password.module": [
-		830,
+		831,
 		29
 	],
 	"../pages/choose-date/choose-date.module": [
@@ -248,19 +251,19 @@ var map = {
 		17
 	],
 	"../pages/flowers-section/flowers-section.module": [
-		842,
+		841,
 		16
 	],
 	"../pages/forget-password/forget-password.module": [
-		841,
+		842,
 		15
 	],
 	"../pages/home/home.module": [
-		843,
+		844,
 		14
 	],
 	"../pages/location/location.module": [
-		844,
+		843,
 		13
 	],
 	"../pages/login/login.module": [
@@ -268,11 +271,11 @@ var map = {
 		12
 	],
 	"../pages/maintenance-section/maintenance-section.module": [
-		846,
+		847,
 		11
 	],
 	"../pages/map/map.module": [
-		847,
+		846,
 		10
 	],
 	"../pages/new-password/new-password.module": [
@@ -292,11 +295,11 @@ var map = {
 		6
 	],
 	"../pages/quotations/quotations.module": [
-		853,
+		852,
 		5
 	],
 	"../pages/register/register.module": [
-		852,
+		853,
 		4
 	],
 	"../pages/request/request.module": [
@@ -415,10 +418,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/basket/basket.module#BasketPageModule', name: 'BasketPage', segment: 'basket', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/change-lang/change-lang.module#ChangeLangPageModule', name: 'ChangeLangPage', segment: 'change-lang', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/change-password/change-password.module#ChangePasswordPageModule', name: 'ChangePasswordPage', segment: 'change-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/basket-detils/basket-detils.module#BasketDetilsPageModule', name: 'BasketDetilsPage', segment: 'basket-detils', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/change-lang/change-lang.module#ChangeLangPageModule', name: 'ChangeLangPage', segment: 'change-lang', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/basket/basket.module#BasketPageModule', name: 'BasketPage', segment: 'basket', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/change-password/change-password.module#ChangePasswordPageModule', name: 'ChangePasswordPage', segment: 'change-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/choose-lang/choose-lang.module#ChooseLangPageModule', name: 'ChooseLangPage', segment: 'choose-lang', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/close-code/close-code.module#CloseCodePageModule', name: 'CloseCodePage', segment: 'close-code', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
@@ -428,19 +431,19 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/finish-orders/finish-orders.module#FinishOrdersPageModule', name: 'FinishOrdersPage', segment: 'finish-orders', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/flower-service/flower-service.module#FlowerServicePageModule', name: 'FlowerServicePage', segment: 'flower-service', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/forget-password/forget-password.module#ForgetPasswordPageModule', name: 'ForgetPasswordPage', segment: 'forget-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/flowers-section/flowers-section.module#FlowersSectionPageModule', name: 'FlowersSectionPage', segment: 'flowers-section', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/forget-password/forget-password.module#ForgetPasswordPageModule', name: 'ForgetPasswordPage', segment: 'forget-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/location/location.module#LocationPageModule', name: 'LocationPage', segment: 'location', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/maintenance-section/maintenance-section.module#MaintenanceSectionPageModule', name: 'MaintenanceSectionPage', segment: 'maintenance-section', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/map/map.module#MapPageModule', name: 'MapPage', segment: 'map', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/maintenance-section/maintenance-section.module#MaintenanceSectionPageModule', name: 'MaintenanceSectionPage', segment: 'maintenance-section', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/new-password/new-password.module#NewPasswordPageModule', name: 'NewPasswordPage', segment: 'new-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'NotificationPage', segment: 'notification', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/provider-data/provider-data.module#ProviderDataPageModule', name: 'ProviderDataPage', segment: 'provider-data', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/quotations/quotations.module#QuotationsPageModule', name: 'QuotationsPage', segment: 'quotations', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/request/request.module#RequestPageModule', name: 'RequestPage', segment: 'request', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/select-location/select-location.module#SelectLocationPageModule', name: 'SelectLocationPage', segment: 'select-location', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/setting/setting.module#SettingPageModule', name: 'SettingPage', segment: 'setting', priority: 'low', defaultHistory: [] },

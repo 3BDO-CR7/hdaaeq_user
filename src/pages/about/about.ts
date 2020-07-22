@@ -14,12 +14,13 @@ export class AboutPage {
   data;
 
   constructor(
-    public navCtrl        : NavController, 
+    public navCtrl        : NavController,
     public navParams      : NavParams,
     private translate     : TranslateService,
     public loadingCtrl    : LoadingController,
     public api            : ApiProvider,
-    public alertCtrl      : AlertController) {
+    public alertCtrl      : AlertController
+  ) {
 
   }
 

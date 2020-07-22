@@ -1,0 +1,4 @@
+#Mon Jul 20 12:09:55 EET 2020
+base.0=/sh3wza/hdaaeq_user/platforms/android/app/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex

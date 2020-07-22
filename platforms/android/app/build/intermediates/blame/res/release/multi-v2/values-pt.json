@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/sh3wza/hdaaeq_user/platforms/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-pt/values-pt.xml",
+            "map": [
+                {
+                    "source": "/Users/aait.saiphone/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/cc83960796069db4b02eb2a7b6e7a7a4/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
